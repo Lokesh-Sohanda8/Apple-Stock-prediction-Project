@@ -1,0 +1,104 @@
+### ✅ **Problem Statement (Explained in Detail)**
+
+**Title:**
+📊 **Apple Stock Price Prediction for the Next 30 Days**
+
+**Objective:**
+To develop a **time series forecasting model** that predicts Apple's stock prices **30 days into the future** using **historical stock market data (2012–2019)**. This predictive model is aimed to assist:
+
+* Investors
+* Traders
+* Financial analysts
+
+…by providing actionable insights from trends, patterns, and the impact of external market forces.
+
+---
+
+### 🔍 **Detailed Dataset Explanation (`AAPL.csv`)**
+
+**Dataset Period:** 2012 to 2019
+**Frequency:** Daily records
+**Attributes:**
+
+| Column   | Description                                |
+| -------- | ------------------------------------------ |
+| `Date`   | Date of trading                            |
+| `Open`   | Opening stock price                        |
+| `High`   | Highest price of the day                   |
+| `Low`    | Lowest price of the day                    |
+| `Close`  | Closing price (often used for forecasting) |
+| `Volume` | Total number of shares traded              |
+
+✅ The **target variable** is the **forecast of the closing price for the next 30 days**.
+
+This is a **univariate/multivariate time-series regression problem**, depending on the model approach.
+
+---
+
+### 🧠 **Key Goals of the Project**
+
+* Develop **time-series forecasting models** (ARIMA, SARIMA, XGBoost)
+* Detect **short- and long-term trends**
+* Analyze **external event impacts** (macroeconomic data, news, etc.)
+* Perform **EDA** to extract patterns and insights
+* **Deploy** an interactive forecasting app using **Flask/Streamlit**
+
+---
+
+### 🛣️ **30-Day Roadmap (Starting 29 May 2025)**
+
+| Phase                                  | Duration | Dates                 | Tasks                                           |
+| -------------------------------------- | -------- | --------------------- | ----------------------------------------------- |
+| 📌 **Kickoff**                         | 1 Day    | **29 May**            | Finalize objectives, define KPIs                |
+| 📌 **Dataset Exploration**             | 2 Days   | **30 May – 1 June**   | Load data, check types, missing values          |
+| 📌 **EDA (Exploratory Data Analysis)** | 1 Week   | **2 June – 8 June**   | Trend plots, volatility, seasonal decomposition |
+| 📌 **Feature Engineering**             | Parallel | 3 June – 10 June      | Rolling averages, lag features, volatility      |
+| 📌 **Model Building**                  | 1 Week   | **9 June – 15 June**  | Train ARIMA, SARIMA, XGBoost                    |
+| 📌 **Model Evaluation**                | 1 Week   | **16 June – 22 June** | Compare MAE, RMSE, MAPE; select best            |
+| 📌 **Deployment**                      | 1 Week   | **23 June – 25 June** | Build web app with Streamlit/Flask              |
+| 📌 **Final Presentation**              | 1 Day    | **26 June**           | Show full pipeline, results, app demo           |
+
+---
+
+### 🔧 **Modeling Workflow**
+
+1. **Data Preprocessing:**
+
+   * Convert `Date` to `datetime`
+   * Sort and index
+   * Handle missing values
+   * Normalize/scale data
+   * Create lag/rolling features
+
+2. **EDA:**
+
+   * Line plots (Close over time)
+   * Distribution of returns
+   * Moving Averages
+   * Volatility analysis
+   * Seasonality/Trend decomposition
+
+3. **Feature Engineering:**
+
+   * Rolling mean/standard deviation
+   * Lagged returns (1-day, 5-day, etc.)
+   * Volume spikes
+   * External indicators (later)
+
+4. **Modeling:**
+
+   * Statistical Models: ARIMA, SARIMA
+   * Machine Learning: XGBoost, Random Forest
+   * Neural Options: LSTM (optional stretch goal)
+
+5. **Model Evaluation:**
+
+   * MAE, RMSE, MAPE
+   * Cross-validation using rolling forecast origin
+
+6. **Deployment:**
+
+   * Build a simple Flask/Streamlit app
+   * Input: Dates
+   * Output: Next 30-day predicted prices
+   * Plot historical + predicted trends
